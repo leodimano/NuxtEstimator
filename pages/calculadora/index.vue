@@ -27,12 +27,13 @@
                         <div class="col-md-6"><input type="text" class="form-control" v-model="tec.nome"></div>
                         <div class="col-md-1 text-center"><label class="col-form-label">{{tec.muitoSimples}}</label></div>
                         <div class="col-md-1 text-center"><label class="col-form-label">{{tec.simples}}</label></div>
-                        <div class="col-md-1"><input type="text" class="form-control" v-model="tec.medio" v-bind:change="calculateTec(tec)"></div>
+                        <div class="col-md-1"><input type="text" class="form-control text-center" v-model="tec.medio" v-bind:change="calculateTec(tec)"></div>
                         <div class="col-md-1 text-center"><label class="col-form-label">{{tec.dificil}}</label></div>
                         <div class="col-md-1 text-center"><label class="col-form-label">{{tec.muitoDificil}}</label></div>
-                        <button class="col-md-1 btn btn-primary" v-on:click="deleteTec(tec)">Excluir</button>
+                        <button class="btn btn-danger btn-xs" v-on:click="deleteTec(tec)">Excluir</button>
                     </div>
-                    <button class="btn btn-primary pull-right" v-on:click="createNewTec()">Nova Tecnologia</button>
+                    <div class="text-right"><button class="btn btn-primary" v-on:click="createNewTec()">Nova Tecnologia</button></div>
+                    
                 </div>
             </div>
         </div>
@@ -83,7 +84,6 @@ export default {
             }
         }
     }
-    
 }
 </script>
 
